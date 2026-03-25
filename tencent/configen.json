@@ -1,0 +1,33 @@
+{
+    "configen": {
+        "version": "4",
+        "sources": [
+            {
+                "id": "main",
+                "path": "lib",
+                "r": true
+            },
+            {
+                "id": "test",
+                "path": "src/test/golang",
+                "r": true
+            }
+        ],
+        "destinations": [
+            {
+                "id": "main",
+                "path": "gen/main4tencent",
+                "sources": [
+                    "main"
+                ]
+            },
+            {
+                "id": "test",
+                "path": "gen/test4tencent",
+                "sources": [
+                    "test"
+                ]
+            }
+        ]
+    }
+}
