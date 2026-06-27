@@ -35,9 +35,21 @@ func (inst* pa0a0e3aad7_libcos_TencentCosDriver) inject(injext application.Injec
 	nop(ie, com)
 
 	
+    com.Enabled = inst.getEnabled(ie)
+    com.Priority = inst.getPriority(ie)
 
 
     return nil
+}
+
+
+func (inst*pa0a0e3aad7_libcos_TencentCosDriver) getEnabled(ie application.InjectionExt)bool{
+    return ie.GetBool("${buckets-driver.tencent-cos.enabled}")
+}
+
+
+func (inst*pa0a0e3aad7_libcos_TencentCosDriver) getPriority(ie application.InjectionExt)int{
+    return ie.GetInt("${buckets-driver.tencent-cos.priority}")
 }
 
 

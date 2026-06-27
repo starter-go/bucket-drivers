@@ -7,7 +7,7 @@ import (
 	"github.com/starter-go/units"
 )
 
-type ExampleCase struct {
+type CaseTrySumAPI struct {
 
 	//starter:component
 
@@ -18,24 +18,27 @@ type ExampleCase struct {
 }
 
 // ListRegistrations implements units.Unit.
-func (inst *ExampleCase) ListRegistrations(list []*units.Registration) []*units.Registration {
+func (inst *CaseTrySumAPI) ListRegistrations(list []*units.Registration) []*units.Registration {
+
+	// old := list
 
 	r1 := &units.Registration{
-		Name:     "example",
-		Enabled:  true,
+		Name:     "case-try-sum-api",
+		Enabled:  false,
 		Priority: 0,
 		Do:       inst.run,
 	}
 
 	list = append(list, r1)
+
 	return list
 }
 
-func (inst *ExampleCase) _impl() units.Unit {
+func (inst *CaseTrySumAPI) _impl() units.Unit {
 	return inst
 }
 
-func (inst *ExampleCase) run(cc context.Context) error {
+func (inst *CaseTrySumAPI) run(cc context.Context) error {
 	return nil
 }
 

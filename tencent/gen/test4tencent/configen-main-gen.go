@@ -30,6 +30,9 @@ func (inst *autoRegistrar) register(factory comFactory) error {
 func (inst*autoRegistrar) addAll() error {
 
     
+    inst.register(&p8ae6d2a6ce_unittestcases_CaseTryCRUD{})
+    inst.register(&p8ae6d2a6ce_unittestcases_CaseTryFileAPI{})
+    inst.register(&p8ae6d2a6ce_unittestcases_CaseTrySumAPI{})
     inst.register(&p8ae6d2a6ce_unittestcases_ExampleCase{})
 
 

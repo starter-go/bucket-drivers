@@ -6,6 +6,7 @@ import (
 	"github.com/starter-go/application"
 	"github.com/starter-go/bucket-drivers/tencent/gen/main4tencent"
 	"github.com/starter-go/bucket-drivers/tencent/gen/test4tencent"
+	"github.com/starter-go/units/modules/units"
 
 	"github.com/starter-go/buckets/modules/buckets"
 	"github.com/starter-go/starter"
@@ -63,6 +64,8 @@ func ModuleForTest() application.Module {
 	mb.Components(test4tencent.ExportComponents)
 
 	mb.Depend(Module())
+	mb.Depend(units.Module())
+	mb.Depend(buckets.ModuleTest())
 
 	return mb.Create()
 }
