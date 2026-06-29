@@ -4,16 +4,18 @@ import (
 	"os"
 
 	"github.com/starter-go/bucket-drivers/aliyun"
-	"github.com/starter-go/starter"
+	"github.com/starter-go/units"
 )
 
 func main() {
 
 	a := os.Args
 	m := aliyun.ModuleForTest()
-	i := starter.Init(a)
+	c := new(units.Context)
 
-	i.MainModule(m)
+	c.Arguments = a
+	c.Module = m
+	c.UsePanic = true
 
-	i.WithPanic(true).Run()
+	units.Run(c)
 }

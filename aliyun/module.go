@@ -62,6 +62,7 @@ func ModuleForTest() application.Module {
 	mb.Components(test4aliyun.ExportComponents)
 
 	mb.Depend(Module())
+	mb.Depend(buckets.ModuleTest())
 
 	return mb.Create()
 }
