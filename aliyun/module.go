@@ -14,8 +14,8 @@ import (
 
 const (
 	theModuleName     = "github.com/starter-go/bucket-drivers/aliyun"
-	theModuleVersion  = "v0.0.1"
-	theModuleRevision = 3
+	theModuleVersion  = "v0.0.2"
+	theModuleRevision = 4
 )
 
 ////////////////////////////////////////////////////////////////////////////////
